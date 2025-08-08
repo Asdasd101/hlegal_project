@@ -1,0 +1,95 @@
+.companies {
+    margin-top: 30px;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 120px);
+        overflow: hidden;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 120px);
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 120px);
+            margin: 0 30px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        &-block {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-image {
+            padding: 35px;
+        }
+    }
+
+    h3 {
+        font-weight: $fw-bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+.hidden {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.cell_1 {
+    background: #1C4280;
+}
+
+.cell_2 {
+    background: #143646;
+}
+
+.cell_3 {
+    background: #F48B30;
+}
+
+.cell_4 {
+    background: #9E4DC3;
+}
+
+.cell_5 {
+    background: #FD9339;
+}
+
+.cell_6 {
+    background: #E2E2E4;
+}
+
+.cell_7 {
+    background: #C71C36;
+}
+
+.cell_8 {
+    background: #DCF3F9;
+}
+
+.cell_9 {
+    background: #EAEAEA;
+}
+
+.cell_10 {
+    background: #282240;
+}
+
+.cell_11 {
+    background: #1D4568;
+}
+
+.cell_12 {
+    background: #000000;
+}

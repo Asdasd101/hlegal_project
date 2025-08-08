@@ -1,12 +1,8 @@
 body {
 	font-family: 'Montserrat';
-	background: $main-color;
-	color: $main-color;
 	font-size: 14px;
 	transition: background .2s ease, color .2s ease;
-	@include viewport-md {
-		font-size: 10px;
-	}
+	font: #{$base-fz}/#{$base-lh} #{$base-ff};
 }
 
 .wrapper {
@@ -17,12 +13,95 @@ body {
 }
 
 .container {
-	max-width: 1180px;
+	max-width: 1660px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 30px;
+
+	@media screen and (min-width: 768px) {
+		padding: 0 60px;
+	}
 }
 
 .title {
 	font-size: 25px;
 	text-align: center;
+}
+
+.header {
+
+	&__page-active {
+		font-size: 36px;
+
+		&::before {
+			content: '/';
+			display: inline-block;
+			font-size: 40px;
+			color: $accent-color;
+			font-weight: bold;
+			line-height: 1;
+			margin: 0 0 0 5px;
+		}
+	}
+}
+
+.mobile-hidden {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.bg-gradient {
+	position: relative;
+	background: $supersoft-gradient;
+	color: $bg-gradient-text;
+	border-radius: 0 0 12px 12px;
+	margin-bottom: 30px;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		right: 40px;
+		left: 40px;
+		height: 22px;
+		bottom: -22px;
+		border-radius: inherit;
+		background: #e7e7f2;
+	}
+
+	&::after {
+		bottom: -12px;
+		height: 12px;
+		right: 20px;
+		left: 20px;
+		background: #cacadb;
+	}
+}
+
+.text-gradient {
+	color: transparent;
+	background: $red-text-gradient;
+	background-clip: text;
+}
+
+.cat-link {
+	color: $active-color-regular;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 8px;
+		height: 8px;
+		border: solid $active-color-regular;
+		border-width: 2px 2px 0 0;
+		display: inline-block;
+		position: absolute;
+		bottom: 5px;
+		transform: rotate(45deg);
+	}
 }
